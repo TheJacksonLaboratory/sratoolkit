@@ -13,8 +13,7 @@ RUN apt-get update  && apt-get install -y \
     apt-utils \
     dpkg-dev \
     libperl-dev \
-    libxml-libxml-perl \
-    && apt-get clean
+    libxml-libxml-perl
 
 # install sra-toolkit
 WORKDIR /tmp
