@@ -17,10 +17,10 @@ RUN apt-get update  && apt-get install -y \
 
 # install sra-toolkit
 WORKDIR /tmp
-RUN wget "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.0/sratoolkit.2.10.0-ubuntu64.tar.gz" && \ 
-    tar -zxvf sratoolkit.2.10.0-ubuntu64.tar.gz
-RUN cp -r sratoolkit.2.10.0-ubuntu64/bin/* /usr/bin
+RUN wget "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.5/sratoolkit.2.10.5-ubuntu64.tar.gz" && \ 
+    tar -zxvf sratoolkit.2.10.5-ubuntu64.tar.gz
+RUN cp -r sratoolkit.2.10.5-ubuntu64/bin/* /usr/bin
 
 # Cleanup
-RUN rm -rf /tmp/sratoolkit.2.10.0-ubuntu64*
+RUN rm -rf /tmp/sratoolkit.2.10.5-ubuntu64*
 RUN apt-get clean
