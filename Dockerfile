@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM continuumio/miniconda3:4.7.12
 
 # install dependencies
 RUN apt-get update  && apt-get install -y \
@@ -13,7 +13,8 @@ RUN apt-get update  && apt-get install -y \
     apt-utils \
     dpkg-dev \
     libperl-dev \
-    libxml-libxml-perl
+    libxml-libxml-perl \
+    procps && apt-get clean -y
 
 # install sra-toolkit
 WORKDIR /tmp
